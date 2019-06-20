@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+
+
+.register-wraper{
+    margin:auto;
+    margin-top: 0;
+	max-width:600px;
+	min-height:600px;
+	position:relative;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.15),0 17px 50px 0 rgba(0,0,0,.10);
+}
+.sign-up-form{
+    margin-top: 1.5px;
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.sign-up-form .group{
+	margin-bottom:15px;
+}
+.sign-up-form .group .individual,
+.sign-up-form .group .estate-agent{
+    color:#0d0d0d;
+    font-weight: 700;
+    font-size: 15px;
+}
+.sign-up-form .group .label,
+.sign-up-form .group .input{
+	width:100%;
+	color:#0d0d0d;
+    font-weight: 800;
+    font-size: 15px;
+	display:block;
+}
+.sign-up-form .group .input{
+	border:none;
+	padding:15px 20px;
+	background:#F28B0C;
+}
+.sign-up-form .group .button{
+	border: none;
+	display: inline-block;
+	border-radius:25px;
+	padding:10px 70px 10px 70px;
+	background: #0d0d0d;
+	color: #F28B0C;
+	cursor: pointer;
+	float: right !important; 
+	text-align: center;
+	font-weight: 800;
+	font-size: 15px;
+}
+
+.form-header h2{
+	text-align: center;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	font-size: 25px;
+}
+.form-body{
+	padding:50px 70px 50px 70px;
+	background: #425944;
+}
+
+.form-footer p{
+	text-align: center;
+	padding-bottom: 15px;
+	font-size: 15px;
+}
+
+.form-footer p a{
+	color: red;
+}
