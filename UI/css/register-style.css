@@ -73,3 +73,11 @@
 .form-footer p a{
 	color: red;
 }
+
+/*media queries*/
+@media( max-width: 768px){
+	.sign-up-form .group .button{
+	   float: none;
+       margin-right: 35px;
+	}
+}
