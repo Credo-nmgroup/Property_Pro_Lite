@@ -75,3 +75,12 @@
 .login-form .group .check:checked + label{
 	color:#F28B0C;
 }
+
+/*media queries*/
+@media( max-width: 768px){
+
+	.login-form .group .button{
+       float: none;
+       margin-right: 40px;
+}
+}
