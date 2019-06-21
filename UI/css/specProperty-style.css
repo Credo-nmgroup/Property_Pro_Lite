@@ -1,0 +1,108 @@
+.property-container{
+ position: relative;
+  max-width: 768px;
+  margin: 5rem auto;
+  padding: 3rem 5rem 0;
+  border-radius: 1px;
+  background: whitesmoke;
+  width: 100%;
+  height: 100%;
+ 
+}
+.card{
+   background-color: White;
+   padding: 1rem;
+   border-radius: 2px;
+  
+}
+.mxy\(1rem\){ margin: 1rem 1rem }
+
+[disabled]{
+   opacity: .4;
+}
+.fluid-img{
+   max-width: 100%;
+   height: auto;
+}
+.product-viewer{
+   display: flex;
+   flex-wrap: wrap;
+   overflow: hidden;
+}
+   
+   .product-viewer
+   .thumbnail-gallery{
+      display: none;
+      margin-right: 1rem;
+   }
+   
+      .product-viewer
+      .thumbnail-gallery
+      .thumbnail-container{
+         border-radius: 2px;
+         border: 1px solid lightgray;
+         margin-bottom: 4px;
+         padding: .25rem;
+         height: 70px;
+         width: 70px;
+         display: flex;
+         align-items: center;
+         cursor: pointer;
+      }
+      .product-viewer
+      .thumbnail-gallery
+      .thumbnail-container:last-child{
+         margin-bottom: 0;
+      }
+         .product-viewer
+         .thumbnail-gallery
+         .thumbnail-container:hover{
+            border-width: 2px;   
+         }
+         .product-viewer
+         .thumbnail-gallery
+         .thumbnail-container.is-active{
+            border-width: 2px;
+         }
+
+   .product-viewer
+   .product-img-container{
+      height: 280px;
+      width: 100%;
+      min-width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+.paginator{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 1rem;
+}
+   
+   .paginator
+   .button{
+      font-size: 24px;
+      padding: .25em .45em;
+      border-width: 1px;
+      border-color: transparent;
+      border-style: solid;
+      border-radius: 2px;
+      cursor: pointer;
+      color: gray;
+   }
+      .paginator
+      .button:hover{
+         border-color: darkgray;
+      }
+
+.badge{
+   background-color: #333;
+   color: white;
+   padding: .5em 1em;
+   border-radius: 50px;
+   letter-spacing: nowrap;
+   font-size: 12px;
+}
