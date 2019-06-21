@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title>Property Pro Lite | Home</title>
+	 <meta charset="utf-8">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	 <meta name="wiewport" content="width=device-width, initial-scale = 1">
+	 <meta name="author" content="Credo Aguete">
+	 <link rel="stylesheet" type="text/css" href="./css/style.css">
+     <link rel="stylesheet" type="text/css" href="./css/addProperty-style.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div id="header-brand">
+				<a href="index.html">
+				     <img src="./images/PPLLogo.png" alt="logo">
+				</a>
+			</div>
+			<nav>
+				<ul>
+					 <li><a href="#">For Sale</a></li>
+				     <li><a href="#">For Rent</a></li>
+				     <li><a href="#">Agents</a></li>
+					 <li><a href="about.html">About Us</a></li>
+					 <li><a href="#">My Account</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section>
+		<div class="container">
+			<div class="ap-wraper">
+
+			     <div class="form-header">
+				    <h2>Add property</h2>
+				</div>
+			     <div class="form-body">
+			     	<div class="ap-form">
+				      <form>
+				     	<fieldset>
+				     		  <div class="row-1">
+                                      <div class="col-1">
+				     			         <label for="title" class="control-lab" >Title</label>
+				     			         <label class="input">
+				     			              <input type="text" name="ap-title" placeholder="e.g. Luxury 3 bedrooms flat" id="title-id">
+				     			         </label>
+				     			      </div>
+				     			 <div class="col-1">
+				     			         <label for="status" class="control-lab">Market Status</label>
+				     			        <label class="select">
+				     			        <select name="status" class="select-control">
+				     				        <option>Available</option>
+				     				        <option>Sold</option>
+				     			         </select>
+				     			           </label>
+				     			  </div>
+				     		  </div>	
+				     			<div class="row-1">
+				     				<div class="col-1">
+				     				<label for="categories" class="control-lab">Category</label>
+				     				<label class="select">
+				     				<select name="categories" class="select-control">
+				     					<option>Select a category</option>
+				     					<option>For Sale</option>
+				     					<option>For Rent</option>
+				     				</select>
+				     				</label>
+				     			</div>
+				     				<div class="col-1">
+				     				<label for="type" class="control-lab">Type</label>
+				     				<label class="select">
+				     				<select name="type" class="select-control">
+				     					 <option>Select a type</option>
+				     					 <option>Flat</option>
+		 	 	 		     	         <option>House</option>
+		 	 	 		     	         <option>Land</option>
+		 	 	 		     	         <option>Commercial Property</option>
+				     				</select>
+				     				</label>
+				     			</div>
+				     			 <div class="col-1">
+				     				<label for="bedrooms" class="control-lab" >Bedrooms</label>
+				     				<label class="input">
+				     				<input type="number" name="bedrooms" min="1" max="25" id="bed-id">
+				     				</label>
+				     			</div>
+				     			</div>
+				     		</fieldset>
+				     		<fieldset>
+				     			<div class="row-1">
+				     				 <div class="col-1">
+				     				     <label for="state" class="control-lab">State</label>
+				     				     <label class="select">
+				     				     <select name="state" class="select-control">
+				     					     <option>Choose a state</option>
+				     				     </select>
+				     				     </label>
+				     				</div>
+				     				
+				     				<div class="col-1">
+				     				     <label for="city" class="control-lab">City</label>
+				     				     <label class="select">
+				     				     <select name="city" class="select-control">
+				     					     <option>Choose a city</option>
+				     				     </select> 
+				     				</label>
+				     				</div>
+				     				<div class="col-1">
+				     				<label for="Address" class="control-lab" >Address</label>
+				     				<label class="input">
+				     				<input type="text" name="bedrooms" id="addrress-id">
+				     				</label>
+				     			</div>
+				     			</div>
+				     		</fieldset>
+				     		<fieldset>
+				     			<div class="row-1">
+				     				<div class="col-1">
+				     				<label for="currency" class="control-lab">Currencry</label>
+				     				<label class="select">
+				     				<select name="currency" class="select-control">
+				     					<option>XOF</option>
+				     					<option>$</option>
+				     				</select>
+				     				</label>
+				     				</div>
+				     				<div class="col-1">
+				     				<label for="price" class="control-lab" >Price</label>
+				     				<label class="input">
+				     				<input type="currency" name="price" id="price-id">
+				     			    </label>
+				     			    </div>
+				     			</div>
+				     		</fieldset>
+				     		<fieldset>
+				     			<div class="row-1">
+				     				
+				     				<label for="description" class="control-lab">Description</label>
+				     				<textarea required="required"></textarea>
+				     			
+				     			</div>
+				     		</fieldset>
+				     		<fieldset>
+				     			<div class="file-upload">
+                                      <div class="file-select">
+                                         <div class="file-select-button" id="fileName">Upload images</div>
+                                         <div class="file-select-name" id="noFile">No image chosen...</div> 
+                                         <input type="file" name="chooseFile" id="chooseFile" multiple>
+                                      </div>
+                                </div>
+				     		</fieldset>
+				      </form>
+				    </div>
+			     </div>
+			     <div class="ap-wraper-btn">
+			     	<button type="submit" class="button"><span>Post</span></button>
+			     </div>
+		    </div>
+		</div>
+	</section>
+    <footer>
+			<div class="row-2">
+		<div class="footer-li">
+			<ul>
+				<li><a href="#">For Sale</a></li>
+				<li><a href="#">For Rent</a></li>
+				<li><a href="#">Agents</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div class="footer-latest">
+			<h1>Popular Properties</h1>
+			<ul>
+				<li><a href="">proident, sunt in culpa</a></li>
+				<li><a href="">sdeserunt mollit animknk </a></li>
+				<li><a href="">proident, sunt in culpa</a></li>
+				<li><a href="">sdeserunt mollit animknk </a></li>
+				<li><a href="">proident, sunt in culpa</a></li>
+				<li><a href="">sdeserunt mollit animknk</a> </li>
+			</ul>
+		</div>
+		<div class="footer-sm">
+			<h1>Follow Us</h1>
+			<a href="#">
+			  <img src="">	
+			</a>
+			<a href="#">
+			  <img src="">	
+			</a>
+			<a href="#">
+			  <img src="">	
+			</a>
+		</div>
+		</div>
+		<div class="signature">
+			<p><span style="width: 50%; font-weight: 800">2019 Designed by Credo &copy; All right reserved</span></p>
+		</div>
+	  </footer>
+ <script type="text/javascript" src="./js/main.js"></script>	  
+ <script type="text/javascript" src="./js/show-slide.js"></script>
+</body>
+</html>
