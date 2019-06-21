@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title>Property Pro Lite | Home</title>
+	 <meta charset="utf-8">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	 <meta name="wiewport" content="width=device-width, initial-scale = 1">
+	 <meta name="author" content="Credo Aguete">
+	 <link rel="stylesheet" type="text/css" href="./css/style.css">
+	 <link rel="stylesheet" type="text/css" href="./css/addProperty-style.css">
+	 <link rel="stylesheet" type="text/css" href="./css/listedProperties-style.css">
+  </head>
+<body>
+	<header>
+		<div class="container">
+			<div id="header-brand">
+				<a href="index.html">
+				     <img src="./images/PPLLogo.png" alt="logo">
+				</a>
+			</div>
+			<nav>
+				<ul>
+					 <li><a href="#">For Sale</a></li>
+				     <li><a href="#">For Rent</a></li>
+				     <li><a href="#">Agents</a></li>
+					 <li><a href="#">About Us</a></li>
+					 <li><a href="register.html">Sign Up</a></li>
+					 <li><a href="login.html">Sign In</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		 <section id="index-banner">
+		     <div class="container">
+			 	 <div class="mySlides fade">  
+                     <img src="./images/slide-1.jpg" style="width: 150%" />  
+                 </div>  
+                 <div class="mySlides fade">  
+                     <img src="./images/slide-2.jpg" style="width: 150%"/>  
+                  </div>  
+                  <div class="mySlides fade">  
+                     <img src="./images/slide-3.jpg" style="width: 150%"/>  
+                 </div>  
+                 <div class="mySlides fade">  
+                     <img src="./images/slide-4.jpg" style="width: 150%"/>  
+                 </div>  
+                 <div class="mySlides fade">  
+                     <img src="./images/slide-5.jpg" style="width: 150%" />  
+                 </div>
+                 <div class="mySlides fade">  
+                     <img src="./images/slide-6.jpg" style="width: 150%" />  
+                 </div>
+          <!-- Navigation arrows -->  
+                 <a class="prev">&#10094;</a>  
+                 <a class="next">&#10095;</a>  
+             </div> 
+		 </section>
+		 <section id="index-reasearch">
+             <div class="container">
+             	
+             	 <div class="search-title">
+           	     <h1>Find Your Property Here</h1>
+           	     </div>
+           	     <div class="search-body">
+           	     <div class="search-bar">
+           	         <div class="radio-image">
+		 	 		     <form>
+		 	 		 	     <div class="image-selector">
+                                 <input id="sale-icon" type="radio" name="icons" value="sale-icon" checked="checked" />
+                                 <label class="drinkcard-cc sale-icon" for="sale-icon"></label>
+                                 <input id="rent-icon" type="radio" name="icons" value="rent-icon" />
+                                 <label class="drinkcard-cc rent-icon"for="rent-icon"></label>
+                             </div>
+		 	 		     </form>
+		 	 	     </div>
+		 	 	     <div class="search-bar-check">
+		 	 	 	     <form>
+		 	 	 	     	
+		 	 	 	     		<div  class="row-1">
+		 	 	 	     			<div class="col-1">
+		 	 	 	     				<label for="area-choice" class="control-lab">Insert the area</label>
+		 	 	 	     	        <label class="input"></label>
+		 	 	 		              <input type="text" name="search" id="area-id" placeholder="Enter your state, city ">
+		 	 	 		           </label>
+		 	 	 	     			</div>
+		 	 	 	     			
+		 	 	 	     		</div>
+		 	 	 	     	
+		 	 	 		     	<div class="row-1">
+		 	 	 		     		<div class="col-1">
+		 	 	 		     			 <label for="type" class="control-lab">Type</label>
+		 	 	 		     <label class="select">
+		 	 	 		     	<select name="type" class="select-control" id="type-id">
+		 	 	 		     	 <option value ="0">All Types</option>
+		 	 	 		     	 <option value ="1">Flat</option>
+		 	 	 		     	 <option value ="2">House</option>
+		 	 	 		     	 <option value ="2">Land</option>
+		 	 	 		     	 <option value ="4">Commercial Property</option>
+		 	 	 		     </select>
+		 	 	 		     </label>
+		 	 	 		     		</div> 
+		 	 	 		     		<div class="col-1">
+		 	 	 		     			<label for="bedrooms" class="control-lab">Bedrooms</label>
+                              <label class="select">
+		 	 	 		     <select name="bedrooms" class="select-control" id="bedrooms-id">
+		 	 	 		     	 <option value ="0" selected="selected">Any</option>
+		 	 	 		     	 <option value ="1">1</option>
+		 	 	 		     	 <option value ="2">2</option>
+		 	 	 		     	 <option value ="2">3</option>
+		 	 	 		     	 <option value ="3">4</option>
+		 	 	 		     	 <option value ="4">5</option>
+		 	 	 		     	 <option value ="5">6+</option>
+		 	 	 		     </select>
+		 	 	 		     </label>
+		 	 	 		     		</div>
+		 	 	 		      
+		 	 	 		     	</div>
+		 	 	 		     
+		 	 	 		      	<div class="row-1">
+		 	 	 		      		<div class="col-1">
+		 	 	 		      			 <label for="min-price" class="control-lab" >Min Price</label>
+		 	 	 		     <label class="select">
+		 	 	 		     	 <select name="minprice"  id="min-price-id" class="select-control">
+		 	 	 		     	 <option value ="0">No Min</option>
+		 	 	 		     </select>
+		 	 	 		     </label>
+		 	 	 		      		</div>
+		 	 	 		      		<div class="col-1">
+		 	 	 		      			<label for="max-price" class="control-lab">Max Price</label>
+		 	 	 		     <label class="select">
+		 	 	 		     	<select name="maxprice" id="max-price-id" class="select-control">
+		 	 	 		     	 <option value ="0">No Max</option>
+		 	 	 		     </select>
+		 	 	 		     </label>
+		 	 	 		      		</div>
+		 	 	 		     
+		 	 	 		      	</div>
+		 	 	 		      	 <div class="search-footer">
+		 	 	 		 <button type="submit" id="search-btn">Search</button>
+		 	 	 		 </div>
+		 	 	 	</form>
+		 	 	 		
+		 	 	     </div>
+		 	 	 </div>
+		 	 	 </div>
+             </div>
+		 </section>
+		 <section id="index-partners">
+		 	 <div class="container">
+		 	 	 <h1>Our Partners</h1>
+		 	 	 <div class="partners-logo">
+		 	 	 	<ul>
+		 	 	 		<li>
+		 	 	 			<a href="">
+		 	 	 				<img src="">
+		 	 	 			</a>
+		 	 	 		</li>
+		 	 	 		<li>
+		 	 	 			<a href="">
+		 	 	 				<img src="">
+		 	 	 			</a>
+		 	 	 		</li>
+		 	 	 		<li>
+		 	 	 			<a href="">
+		 	 	 				<img src="">
+		 	 	 			</a>
+		 	 	 		</li>
+		 	 	 		<li>
+		 	 	 			<a href="">
+		 	 	 				<img src="">
+		 	 	 			</a>
+		 	 	 		</li>
+		 	 	 		<li>
+		 	 	 			<a href="">
+		 	 	 				<img src="">
+		 	 	 			</a>
+		 	 	 		</li>
+		 	 	 		<li>
+		 	 	 			<a href="">
+		 	 	 				<img src="">
+		 	 	 			</a>
+		 	 	 		</li>
+		 	 	 	</ul>
+		 	 	 </div>
+		 	 </div>
+		 </section>
+		
+	</main>
+	<footer>
+		<div class="row-2">
+		<div class="footer-li">
+			<ul>
+				<li><a href="#">For Sale</a></li>
+				<li><a href="#">For Rent</a></li>
+				<li><a href="#">Agents</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div class="footer-latest">
+			<h1>Popular Properties</h1>
+			<ul>
+				<li><a href="">proident, sunt in culpa</a></li>
+				<li><a href="">sdeserunt mollit animknk </a></li>
+				<li><a href="">proident, sunt in culpa</a></li>
+				<li><a href="">sdeserunt mollit animknk </a></li>
+				<li><a href="">proident, sunt in culpa</a></li>
+				<li><a href="">sdeserunt mollit animknk</a> </li>
+			</ul>
+		</div>
+		<div class="footer-sm">
+			<h1>Follow Us</h1>
+			<a href="#">
+			  <img src="">	
+			</a>
+			<a href="#">
+			  <img src="">	
+			</a>
+			<a href="#">
+			  <img src="">	
+			</a>
+		</div>
+		</div>
+		<div class="signature">
+			<p><span style="width: 50%; font-weight: 800">2019 Designed by Credo &copy; All right reserved</span></p>
+		</div>
+	  </footer>
+ <script type="text/javascript" src="./js/show-slide.js"></script>
+</body>
+</html>
