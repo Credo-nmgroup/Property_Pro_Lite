@@ -4,7 +4,7 @@ body{
 	line-height: 1.5;
 	margin: 0;
 	padding: 0;
-	background-color: #fffff;
+	background-color: #ffffff;
 }
 /*global*/
 .container{
@@ -44,18 +44,57 @@ header ul {
 }
 
 header li {
-	float: left;
-	display: inline;
+	/* float: left; */
+	display: inline-block;
 	padding: 0 30px 0 30px;
+}
+header li :hover{
+border-bottom: #F28B0C 3px solid;
 }
 
 header #header-brand {
 	float: left;
 	border-right: #0d0d0d 1px Solid;
 }
+ header .nav{
+  text-align: right;
+}
+.nav label{
+  margin-right: 40px; 
+  cursor: pointer;
+  display: none;
+  font-size: 50px;
+  line-height: 80px;
+  width: 26px;
+  float: right;
+
+}
+.nav #toggle{
+  display: none;
+}
 header nav {
 	float: right;
 	margin-top: 40px;
+}
+/* media queries */
+@media only screen and (max-width : 768px){
+  .nav label{
+    display: block;
+    margin-top: 15px;
+  }
+  nav ul li{
+    text-align: center;
+    display: none;
+    width: 100%;
+    font-size: 60px;
+  }
+  nav ul li a{
+    display: block;
+  }
+
+  #toggle:checked + nav ul li{
+    display: inline-block;
+ }
 }
 /*banner-slide*/
 

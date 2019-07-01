@@ -1,148 +1,149 @@
 //helpers 
 
 //shorthand for querySelector function
-function $(str){ return document.querySelector(str) }
+function $(str){ return document.querySelector(str); }
 //shorthand for querySelectorAll function
-function $$(str){ return document.querySelectorAll(str) }
+function $$(str){ return document.querySelectorAll(str); }
 
 const containerList = [...$$('#product-viewer--main .thumbnail-container')],
-      imgList = containerList.map(container => container.firstElementChild),
-      productImg = $('#product-viewer--main img[name="product-img"]'),
-      btnLeft = $('#paginator--main .button[name="left-button"]'),
-      btnRight = $('#paginator--main .button[name="right-button"]'),
-      pageViewer = $('#paginator--main .badge')
+    imgList = containerList.map(container => container.firstElementChild),
+    productImg = $('#product-viewer--main img[name="product-img"]'),
+    btnLeft = $('#paginator--main .button[name="left-button"]'),
+    btnRight = $('#paginator--main .button[name="right-button"]'),
+    pageViewer = $('#paginator--main .badge');
 
 let index = 0,
     currentPos = 1,
-    length = imgList.length,
+    length1 = imgList.length,
     selectedImg = imgList[index],
     src = selectedImg.getAttribute('src'),
-    alt = selectedImg.getAttribute('alt')
+    alt = selectedImg.getAttribute('alt');
 
 containerList.forEach((container, index) =>
 {
-   container.addEventListener('mouseenter', handler)
-   container.addEventListener('mouseleave', handler)
-   container.addEventListener('click', handler)
+    container.addEventListener('mouseenter', handler);
+    container.addEventListener('mouseleave', handler);
+    container.addEventListener('click', handler);
    
-   container.setAttribute('data-index', index)
-})
+    container.setAttribute('data-index', index);
+});
 
-btnLeft.addEventListener('click', prev)
-btnRight.addEventListener('click', next)
+btnLeft.addEventListener('click', prev);
+btnRight.addEventListener('click', next);
 
-productImg.setAttribute('src', src)
-productImg.setAttribute('alt', alt)
-selectedImg.parentElement.classList.add('is-active')
-pageViewer.textContent = `${currentPos} / ${length}`
+productImg.setAttribute('src', src);
+productImg.setAttribute('alt', alt);
+selectedImg.parentElement.classList.add('is-active');
+pageViewer.textContent = `${currentPos} / ${length}`;
 
 function handler(e)
 {
-   if(!e) e = window.event //For IE
+    if(!e) e = window.event; //For IE
    
-   let ct = e.currentTarget,
-       targetHasActiveClass = /is-active/g.test(ct.classList.value)
-   
-   switch(e.type)
-   {
-      case 'mouseenter':
+    let ct = e.currentTarget,
+        targetHasActiveClass = /is-active/g.test(ct.classList.value);
+    let _src = ct.firstElementChild.getAttribute('src');
+    switch(e.type)
+    
+    {
+    case 'mouseenter':
          
-         if(targetHasActiveClass) break
-         let _src = ct.firstElementChild.getAttribute('src')
-         productImg.setAttribute('src', _src)
-         break
+        if(targetHasActiveClass) break;
+        
+        productImg.setAttribute('src', _src);
+        break;
          
-      case 'mouseleave':
+    case 'mouseleave':
          
-         if(targetHasActiveClass) break
+        if(targetHasActiveClass) break;
          
-         productImg.setAttribute('src', src)
-         break
+        productImg.setAttribute('src', src);
+        break;
          
-      case 'click':        
+    case 'click':        
          
-         if(targetHasActiveClass) break
+        if(targetHasActiveClass) break;
          
-         index = parseInt(ct.dataset.index)
-         currentPos = index + 1
+        index = parseInt(ct.dataset.index);
+        currentPos = index + 1;
          
-         if(currentPos === 1)
-         {
-            btnLeft.setAttribute('disabled', 'disabled')
-            btnRight.removeAttribute('disabled')   
-         }
-         else if(currentPos > 1)
-         {
-            btnLeft.removeAttribute('disabled')   
-         }
-         else if(currentPos < length)
-         {
-            btnRight.removeAttribute('disabled')
-         }
-         else if(currentPos === length)
-         {   
-            btnRight.setAttribute('disabled', 'disabled')
-            btnLeft.removeAttribute('disabled')  
-         }
+        if(currentPos === 1)
+        {
+            btnLeft.setAttribute('disabled', 'disabled');
+            btnRight.removeAttribute('disabled');   
+        }
+        else if(currentPos > 1)
+        {
+            btnLeft.removeAttribute('disabled');   
+        }
+        else if(currentPos < length1)
+        {
+            btnRight.removeAttribute('disabled');
+        }
+        else if(currentPos === length1)
+        {   
+            btnRight.setAttribute('disabled', 'disabled');
+            btnLeft.removeAttribute('disabled');  
+        }
          
-         selectedImg.parentElement.classList.remove('is-active')
-         selectedImg = imgList[index]
-         src = selectedImg.getAttribute('src')
-         productImg.setAttribute('src', src)
-         selectedImg.parentElement.classList.add('is-active')
-         pageViewer.textContent = `${currentPos} / ${length}`
-         break
-   } 
+        selectedImg.parentElement.classList.remove('is-active');
+        selectedImg = imgList[index];
+        src = selectedImg.getAttribute('src');
+        productImg.setAttribute('src', src);
+        selectedImg.parentElement.classList.add('is-active');
+        pageViewer.textContent = `${currentPos} / ${length1}`;
+        break;
+    } 
 }
 
 function next(e)
 {
-   if(!e) window.event //For IE
+    if(!e) window.event; //For IE
    
-   currentPos++
+    currentPos++;
    
-   if(currentPos === length)
-   {
-      btnRight.setAttribute('disabled', 'disabled')
-      btnLeft.removeAttribute('disabled')
-   }
-   else if(currentPos === 2)
-   { 
-      btnLeft.removeAttribute('disabled')
-   }
+    if(currentPos === length1)
+    {
+        btnRight.setAttribute('disabled', 'disabled');
+        btnLeft.removeAttribute('disabled');
+    }
+    else if(currentPos === 2)
+    { 
+        btnLeft.removeAttribute('disabled');
+    }
    
-   index++
+    index++;
    
-   selectedImg.parentElement.classList.remove('is-active')
-   selectedImg = imgList[index]
-   src = selectedImg.getAttribute('src')
-   productImg.setAttribute('src', src)
-   selectedImg.parentElement.classList.add('is-active')
-   pageViewer.textContent = `${currentPos} / ${length}`
+    selectedImg.parentElement.classList.remove('is-active');
+    selectedImg = imgList[index];
+    src = selectedImg.getAttribute('src');
+    productImg.setAttribute('src', src);
+    selectedImg.parentElement.classList.add('is-active');
+    pageViewer.textContent = `${currentPos} / ${length1}`;
 }
 
 function prev(e)
 {
-   if(!e) window.event //For IE
+    if(!e) window.event; //For IE
    
-   currentPos--
+    currentPos--;
    
-   if(currentPos === 1)
-   {
-      btnLeft.setAttribute('disabled', 'disabled')
-      btnRight.removeAttribute('disabled')
-   }
-   else if(currentPos === length - 1)
-   { 
-      btnRight.removeAttribute('disabled')
-   }
+    if(currentPos === 1)
+    {
+        btnLeft.setAttribute('disabled', 'disabled');
+        btnRight.removeAttribute('disabled');
+    }
+    else if(currentPos === length1 - 1)
+    { 
+        btnRight.removeAttribute('disabled');
+    }
    
-   index--
+    index--;
    
-   selectedImg.parentElement.classList.remove('is-active')
-   selectedImg = imgList[index]
-   src = selectedImg.getAttribute('src')
-   productImg.setAttribute('src', src)
-   selectedImg.parentElement.classList.add('is-active')
-   pageViewer.textContent = `${currentPos} / ${length}`
+    selectedImg.parentElement.classList.remove('is-active');
+    selectedImg = imgList[index];
+    src = selectedImg.getAttribute('src');
+    productImg.setAttribute('src', src);
+    selectedImg.parentElement.classList.add('is-active');
+    pageViewer.textContent = `${currentPos} / ${length1}`;
 }
